@@ -1,0 +1,5 @@
+com\cloud\org\service\impl\DeptServiceImpl.class
+com\cloud\org\controller\DeptController.class
+com\cloud\org\service\DeptService.class
+com\cloud\org\mapper\DeptMapper.class
+com\cloud\org\DeptProvider_8100.class

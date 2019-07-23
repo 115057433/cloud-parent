@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cloud.org.mapper.DeptMapper">
+
+	
+	<resultMap type="com.cloud.org.entity.Dept" id="deptResultMap">
+		<result column="dept_id" property="deptId" jdbcType="VARCHAR"/>
+		<result column="dept_name" property="deptName" jdbcType="VARCHAR"/>
+		<result column="dept_data_source" property="deptDataSource" jdbcType="VARCHAR"/>
+	</resultMap>
+
+
+	<insert id="addDept" parameterType="com.cloud.org.entity.Dept">
+		INSERT INTO dept_3 (dept_id,dept_name,dept_data_source)
+		VALUES
+		(#{deptId},#{deptName},'business')
+	</insert>
+	
+	
+	<select id="getDeptById" parameterType="com.cloud.org.entity.Dept" resultMap="deptResultMap">
+		SELECT * FROM dept_3 WHERE dept_id = #{deptId}
+	</select>
+	
+	
+	<select id="findAll" parameterType="com.cloud.org.entity.Dept" resultMap="deptResultMap">
+		SELECT * FROM dept_3 
+		<where>
+			1=1
+			<if test="deptDataSource != null and deptDataSource != ''">
+				and dept_data_source = #{deptDataSource}
+			</if>
+			<if test="deptName != null and deptName !=''">
+				and dept_name = #{deptName}
+			</if>
+			<if test="deptId != null and deptId != ''">
+				and dept_id = #{deptId}
+			</if>
+		</where>
+	</select>
+</mapper>

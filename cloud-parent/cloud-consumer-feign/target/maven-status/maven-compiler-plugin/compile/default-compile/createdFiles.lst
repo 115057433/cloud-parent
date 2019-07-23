@@ -1,0 +1,4 @@
+com\cloud\org\controller\DeptController_Consumer.class
+com\cloud\org\cfgbeans\ConfigBean.class
+com\cloud\org\controller\TestController.class
+com\cloud\org\Deptconsumer_8300_feign.class

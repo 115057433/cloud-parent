@@ -1,0 +1,4 @@
+com\cloud\org\entity\Dept.class
+com\cloud\org\api\DeptClientService.class
+com\cloud\org\api\DeptClientServiceFallbackFactory$1.class
+com\cloud\org\api\DeptClientServiceFallbackFactory.class

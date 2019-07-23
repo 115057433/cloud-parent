@@ -1,0 +1,9 @@
+debug: true
+
+spring:
+   cloud:
+      config:
+         name: cloud-config-center-client
+         label: master
+         profile: test
+         uri: http://config-3344.com:3344/
