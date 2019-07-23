@@ -1,0 +1,13 @@
+server:
+   port: 3456
+
+spring:
+   application:
+      name: cloud-rabbit
+   rabbitmq:
+      host: 127.0.0.1
+      port: 5672
+   datasource:
+      username: xiaoyao
+      password: xiaoyao
+      
